@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="./styles.css">
+  <title>Gatitos</title>
+</head>
+<body>
+  <h1>Michis App</h1>
+  <div><button onclick="loadRandomMichis()">Recargar gatito</button></div>
+  <br>
+  <div style="color:red"><h2 id="error"></h2></div>
+  <br>
+  <section id="randomMichis">
+    <h2>Michis aleatorios</h2>
+    
+    <div class="container">
+      <article class="card">
+        <img id='gatito1' alt="imagen gatito" width="150px">
+        <button id="btn1">Guardar michi en favorito</button>
+      </article>
+      
+      <article class="card">
+        <img id='gatito2' alt="imagen gatito" width="150px">
+        <button id="btn2">Guardar michi en favorito</button>
+      </article>
+    </div>
+  </section>
+
+  <div>
+    <h2>Michis favoritos</h2>
+    <section id="favoritesMichis" class="container"/>
+  </div>
+
+  <section id="uploadingMichi">
+    <h2>Sube la foto de tu michi</h2>
+    <form id="uploadingForm">
+      <input id='file' type='file' name='file'>
+      <button type="button" onclick="uploadMichiPhoto()">
+        Subir foto de michi 
+      </button>
+    </form>
+  </section>
+
+  <script src="./main.js"></script>
+</body>
+</html>
